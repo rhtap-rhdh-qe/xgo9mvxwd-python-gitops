@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xgo9mvxwd-python-gitops
+  description: This is GitOps manifest for xgo9mvxwd-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: xgo9mvxwd-python
+    backstage.io/kubernetes-id: xgo9mvxwd-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: xgo9mvxwd-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xgo9mvxwd-python
